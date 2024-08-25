@@ -13,7 +13,7 @@ function App() {
     const handleSubmit = async () => {
         try {
             const dataArray = inputData.split(',').map(item => item.trim());
-            const response = await axios.post('http://localhost:8000/bfhl', { data: dataArray });
+            const response = await axios.post('https://backend-nine-beryl-29.vercel.app/bfhl', { data: dataArray });
             setResponseData(response.data);
         } catch (error) {
             console.error("Error while posting data", error);
